@@ -1,13 +1,16 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(HelveticaNeueUltraLight.ttf);
+  }
 *{
-   font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue";
+   font-family:myFirstFont,"Helvetica Ultra Light","Helvetica Neue",Helvetica,arial,sans-serif;
    font-size: 22px;
 }
 
 .container{
     height: fit-content;
     width:fit-content;
-    border: 1px solid #898279;
-    border-radius: 3%;
+   
     display: grid;
     grid-auto-columns: 57px ;
     grid-template-rows: 70px 47px 47px 47px 47px 47px ;
@@ -29,21 +32,24 @@
 }
 
 .results{
-    border: 1px solid #898279;
-    border-radius: 3%;
+    border: 3px solid #898279 ;
+    
     text-align: right;
     position: relative;
-    
+    border-top-left-radius: 3px;
+
+    border-top-right-radius:3px;
     grid-row: 1;
     grid-column: 1/5;
     background-color: #898279;
     color: white;
-        
+      
 }
 .results > div{
     position: absolute;
     bottom:0;
     right:0;
+    padding-right:10px;
     font-size: 33px;
 }
 
@@ -74,4 +80,9 @@
 
 .zero{
     grid-column:1/3;
+    border-bottom-left-radius: 3px;
+}
+
+.equals{
+    border-bottom-right-radius: 3px;
 }
